@@ -1,0 +1,14 @@
+{{#link-to (query-params show=null)}}All{{/link-to}}
+{{#link-to (query-params show='with')}}With workspaces{{/link-to}}
+{{#link-to (query-params show='without')}}Without workspaces{{/link-to}}
+
+<ul>
+{{#each filteredHosts as |host|}}
+  <li>
+    <h3>{{ host.name }}</h3>
+    {{#each host.workspaces as |workspace|}}
+      {{workspace.name}}
+    {{/each}}
+  </li>
+{{/each}}
+</ul>

@@ -7,6 +7,8 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('host');
+  this.route('workspace');
 });
 
 export default Router;
